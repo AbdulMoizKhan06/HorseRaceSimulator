@@ -83,15 +83,26 @@ public class Race
             printRace();
             
             //if any of the three horses has won the race is finished
-            if ( raceWonBy(lane1Horse) || raceWonBy(lane2Horse) || raceWonBy(lane3Horse) )
-            {
+
+            if (raceWonBy(lane1Horse)) {
                 finished = true;
+                System.out.println("And the winner is... " + lane1Horse.getName() + "!");
+            }
+            else if (raceWonBy(lane2Horse)) {
+                finished = true;
+                System.out.println("And the winner is... " + lane2Horse.getName() + "!");
+            }
+            else if (raceWonBy(lane3Horse)) {
+                finished = true;
+                System.out.println("And the winner is... " + lane3Horse.getName() + "!");
+            }
+            else {
+                //wait for 100 milliseconds
+                try{ 
+                    TimeUnit.MILLISECONDS.sleep(100);
+                }catch(Exception e){}
             }
            
-            //wait for 100 milliseconds
-            try{ 
-                TimeUnit.MILLISECONDS.sleep(100);
-            }catch(Exception e){}
         }
     }
     
