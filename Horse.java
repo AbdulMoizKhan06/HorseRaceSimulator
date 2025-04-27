@@ -3,7 +3,7 @@
  * Class to represent individual race participants as horses
  * 
  * @author Abdul Moiz Khan
- * @version 1.0
+ * @version 1.0.1
  */
 public class Horse
 {
@@ -59,6 +59,7 @@ public class Horse
     public void goBackToStart() // Resets the horse to the start of the race
     {
         this.DistanceTravelled = 0; //?
+        this.fallen = false;
     }
     
     public boolean hasFallen() // Returns true if horse has fallen, false otherwise
