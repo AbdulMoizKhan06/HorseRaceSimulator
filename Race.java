@@ -80,13 +80,16 @@ public class Race
                       
         while (!finished)
         {
+
+            //print the race positions
+            printRace();
+
+            
             //move each horse
             moveHorse(lane1Horse);
             moveHorse(lane2Horse);
             moveHorse(lane3Horse);
                         
-            //print the race positions
-            printRace();
             
             //if any of the three horses has won the race is finished
 
@@ -136,7 +139,9 @@ public class Race
             //so if you double the confidence, the probability that it will fall is *2
             if (Math.random() < (0.1*theHorse.getConfidence()*theHorse.getConfidence()))
             {
-                theHorse.fall();
+                if (!raceWonBy(theHorse)) {
+                    theHorse.fall();
+                }
             }
         }
     }
@@ -241,4 +246,5 @@ public class Race
 /**
  * - Made it so race couldn't start without all 3 race lanes filled by horses
  * - Prints 'X' character instead of '\u2322'
- */
+ * - Makes sure horse doesn't fall if it's already reached the finish line
+ */ 
