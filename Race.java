@@ -205,7 +205,7 @@ public class Race
         //else print the horse's symbol
         if(theHorse.hasFallen())
         {
-            System.out.print('\u2322');
+            System.out.print('X');
         }
         else
         {
@@ -236,3 +236,9 @@ public class Race
         }
     }
 }
+
+
+/**
+ * - Made it so race couldn't start without all 3 race lanes filled by horses
+ * - Prints 'X' character instead of '\u2322'
+ */
