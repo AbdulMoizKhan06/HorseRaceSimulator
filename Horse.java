@@ -25,7 +25,10 @@ public class Horse
     {
        this.symbol = horseSymbol;
        this.name = horseName;
-       this.confidence = horseConfidence;
+       this.setConfidence(horseConfidence);
+       this.DistanceTravelled = 0;
+       this.fallen = false;
+
     }
     
     
@@ -39,6 +42,19 @@ public class Horse
     public double getConfidence() // Returns horse confidence rating
     {
         return this.confidence;
+    }
+
+    public void setConfidence(double confidence) // Ensure confidence is within a 0 and 1
+    { 
+        if (confidence > 1) {
+            this.confidence = 1;
+        }
+        else if (confidence < 0) {
+            this.confidence = 0;
+        }
+        else {
+            this.confidence=confidence;
+        }
     }
     
     public int getDistanceTravelled() // Returns distance travelled by horse
@@ -70,11 +86,6 @@ public class Horse
     public void moveForward() // Increments the distance travelled by the horse by 1
     {
         this.DistanceTravelled += 1;
-    }
-
-    public void setConfidence(double newConfidence) // Sets confidence rating of the horse to given value
-    {
-        this.confidence = newConfidence;
     }
     
     public void setSymbol(char newSymbol) // Sets horse symbol to given character
