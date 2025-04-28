@@ -9,11 +9,11 @@ public class Horse
 {
     //Fields of class Horse
 
-    String name;
-    char symbol;
-    double confidence;
-    boolean fallen;
-    int DistanceTravelled;
+    private String name;
+    private char symbol;
+    private double confidence;
+    private boolean fallen;
+    private int DistanceTravelled;
     
     
       

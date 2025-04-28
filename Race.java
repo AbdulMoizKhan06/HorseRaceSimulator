@@ -84,7 +84,7 @@ public class Race
             //print the race positions
             printRace();
 
-            
+
             //move each horse
             moveHorse(lane1Horse);
             moveHorse(lane2Horse);
@@ -247,4 +247,5 @@ public class Race
  * - Made it so race couldn't start without all 3 race lanes filled by horses
  * - Prints 'X' character instead of '\u2322'
  * - Makes sure horse doesn't fall if it's already reached the finish line
+ * - Swap printRace() and moveHorse() method calls so horses only move after racetrack is displayed
  */ 
