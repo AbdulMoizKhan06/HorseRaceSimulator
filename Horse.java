@@ -3,7 +3,7 @@
  * Class to represent individual race participants as horses
  * 
  * @author Abdul Moiz Khan
- * @version 1.0.1
+ * @version 1.0.2
  */
 public class Horse
 {

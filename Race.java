@@ -6,7 +6,7 @@ import java.lang.Math;
  * for a given distance
  * 
  * @author McRaceface
- * @version 1.0
+ * @version 1.2
  */
 public class Race
 {
@@ -64,6 +64,12 @@ public class Race
      */
     public void startRace()
     {
+        // Checks if all horses are added before race
+        if (lane1Horse == null || lane2Horse == null || lane3Horse == null) { 
+            System.out.println("Add horses to all three lanes before starting race.");
+            return;
+        }
+
         //declare a local variable to tell us when the race is finished
         boolean finished = false;
         
